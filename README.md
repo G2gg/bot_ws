@@ -10,3 +10,25 @@ cd bot_ws
 mkdir src
 cd src
 ```
+
+Now we will create a ros2 package folder named as "bot_description".
+
+```
+ros2 pkg create --build-type ament_cmake bot_description
+```
+
+Now to have a basic file structure ready to be used in the VS Code, follow the below commands or steps to build your workspace for the first time.
+
+```
+cd ..
+colcon build
+```
+
+Now open up the VS code and make the file structure same as given in the repository.
+
+When the fresh terminal is opened up for running the simulation or Rviz, first source the workspace using the below command.
+
+```
+cd
+source bot_ws/install/setup.bash
+```
