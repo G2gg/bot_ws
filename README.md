@@ -7,15 +7,15 @@ FOR THE FIRST TIME ROS2 users, source the ROS2 with your own ROS2 distro name. H
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
-======================================================== REMEMBER ================================================================================================================
-Always remember to build the workspace whenever you make changes in the code. It is assumed that, this is done everytime the file structure or the code is changes or copied.
+> [!NOTE]
+> Always remember to build the workspace whenever you make changes in the code. It is assumed that, this is done everytime the file structure or the code is changes or copied.
 
 *** Go into your Workspace Folder first and then build i.e. use the below command ***
 
 ```
 colcon build
 ```
-==================================================================================================================================================================================
+
 Now start with the creation of workspace. To proceed with this we will first will make a folder with "bot_ws" as its name. Then create a "src" folder in it.
 
 ```
