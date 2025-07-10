@@ -79,6 +79,25 @@ ros2 launch bot_description gazebo.launch.py
 ros2 launch bot_controller controller.launch.py
 ```
 
+Make one more package named as bot_script, which will handle the LIDAR detection and working of robot based on it. This is the main package that will stop the robot from falling off the table.
+```
+cd
+cd bot_ws/src/
+ros2 pkg create --build-type ament_python bot_script
+cd ..
+colcon build
+```
+Now again copy the file structure and the code. To use it, run the following commands in three seperate terminal tabs or windows.
+```
+ros2 launch bot_description gazebo.launch.py
+```
+```
+ros2 launch bot_controller controller.launch.py
+```
+```
+ros2 run bot_script edge_detection.py
+```
+
 Then to combine the above commands (i.e. to Run the robot in one command) we will make a bringup package.
 
 ```
