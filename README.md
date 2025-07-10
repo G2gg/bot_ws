@@ -1,7 +1,14 @@
 # bot_ws
 Workshop Instructions
 
-Start with the creation of workspace. To proceed with this we will first will make a folder with "bot_ws" as its name. Then create a "src" folder in it.
+FOR THE FIRST TIME ROS2 users, source the ROS2 with your own ROS2 distro name. Here, since we have installed ROS2 Humble, we are using "humble" in the echo command.
+
+```
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Now start with the creation of workspace. To proceed with this we will first will make a folder with "bot_ws" as its name. Then create a "src" folder in it.
 
 ```
 cd
