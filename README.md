@@ -7,7 +7,15 @@ FOR THE FIRST TIME ROS2 users, source the ROS2 with your own ROS2 distro name. H
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+======================================================== REMEMBER ================================================================================================================
+Always remember to build the workspace whenever you make changes in the code. It is assumed that, this is done everytime the file structure or the code is changes or copied.
 
+*** Go into your Workspace Folder first and then build i.e. use the below command ***
+
+```
+colcon build
+```
+==================================================================================================================================================================================
 Now start with the creation of workspace. To proceed with this we will first will make a folder with "bot_ws" as its name. Then create a "src" folder in it.
 
 ```
@@ -51,3 +59,37 @@ When launching the robot in simulaiton or Gazebo World use the following.
 ```
 ros2 launch bot_description gazebo.launch.py
 ```
+
+After testing the spawning of the robot into the Gazebo Sim, now we will make a controller package.
+
+```
+cd
+cd bot_ws/src/
+ros2 pkg create --build-type ament_cmake bot_controller
+cd ..
+colcon build
+```
+
+After comparing and matching with the repository files in the controller package. Now run both the gazebo and the controller in seperate terminal tabs or windows.
+```
+ros2 launch bot_description gazebo.launch.py
+```
+```
+ros2 launch bot_controller controller.launch.py
+```
+
+Then to combine the above commands (i.e. to Run the robot in one command) we will make a bringup package.
+
+```
+cd
+cd bot_ws/src/
+ros2 pkg create --build-type ament_cmake bot_bringup
+cd ..
+colcon build
+```
+
+Copy the file structure from the repository, and now we will run the whole simulation with just one launch file.
+```
+ros2 launch bot_bringup simulation.launch.py
+```
+
