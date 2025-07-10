@@ -7,14 +7,7 @@ FOR THE FIRST TIME ROS2 users, source the ROS2 with your own ROS2 distro name. H
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
-> [!NOTE]
-> Always remember to build the workspace whenever you make changes in the code. It is assumed that, this is done everytime the file structure or the code is changes or copied.
 
-> Go into your Workspace Folder first and then build i.e. use the below command 
-
-> ```
-> colcon build
-> ```
 
 Now start with the creation of workspace. To proceed with this we will first will make a folder with "bot_ws" as its name. Then create a "src" folder in it.
 
@@ -38,6 +31,14 @@ Now to have a basic file structure ready to be used in the VS Code, follow the b
 cd ..
 colcon build
 ```
+> [!NOTE]
+> Always remember to build the workspace whenever you make changes in the code. It is assumed that, this is done everytime the file structure or the code is changes or copied.
+
+> Go into your Workspace Folder first and then build i.e. use the below command 
+
+> ```
+> colcon build
+> ```
 
 Now open up the VS code and make the file structure same as given in the repository.
 
