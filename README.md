@@ -39,3 +39,15 @@ When the fresh terminal is opened up for running the simulation or Rviz, first s
 cd
 source bot_ws/install/setup.bash
 ```
+
+After having the launch files of rviz ready in your bot_ws/src, use the following command to launch the bot with Rviz2.
+
+```
+ros2 launch bot_description display.launch.py
+```
+
+When launching the robot in simulaiton or Gazebo World use the following.
+
+```
+ros2 launch bot_description gazebo.launch.py
+```
