@@ -10,11 +10,11 @@ source ~/.bashrc
 > [!NOTE]
 > Always remember to build the workspace whenever you make changes in the code. It is assumed that, this is done everytime the file structure or the code is changes or copied.
 
-*** Go into your Workspace Folder first and then build i.e. use the below command ***
+> Go into your Workspace Folder first and then build i.e. use the below command 
 
-```
-colcon build
-```
+> ```
+> colcon build
+> ```
 
 Now start with the creation of workspace. To proceed with this we will first will make a folder with "bot_ws" as its name. Then create a "src" folder in it.
 
